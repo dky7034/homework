@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼</title>
+    <style>
+      /* 전체 레이아웃 */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f6f7;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 로고 영역 */
+      div a img {
+        display: block;
+        margin: 30px auto 10px;
+        width: 150px;
+      }
+      div p {
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* 폼 컨테이너 */
+      form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px 30px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 입력 필드 */
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="datetime"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: #03c75a;
+        outline: none;
+        box-shadow: 0 0 4px rgba(3, 199, 90, 0.3);
+      }
+
+      /* 체크박스 */
+      label {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        font-size: 14px;
+        color: #555;
+      }
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      /* 버튼 */
+      input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background-color: #03c75a;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+      input[type="submit"]:hover {
+        background-color: #02a64d;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 네이버 로고 영역 -->
+    <div>
+      <a href="https://www.naver.com"
+        ><img src="./img/naver-logo.png" alt="네이버"
+      /></a>
+      <p>실명 인증된 아이디로 가입</p>
+    </div>
+    <form action="#">
+      <!-- 회원가입 입력 폼 영역 -->
+      <div>
+        <div>
+          <input type="text" placeholder="아이디" name="id" id="id" />
+        </div>
+        <div>
+          <input type="password" placeholder="비밀번호" name="pwd" id="pwd" />
+        </div>
+        <div>
+          <input
+            type="email"
+            placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)"
+            name="email"
+            id="email"
+          />
+        </div>
+        <div>
+          <input type="text" placeholder="이름" name="name" id="name" />
+        </div>
+        <div>
+          <input
+            type="datetime"
+            placeholder="생년월일 8자리"
+            name="birth"
+            id="birth"
+          />
+        </div>
+        <div>
+          <select name="telecom" id="telecom">
+            <option value="">통신사 선택</option>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LG U+">LG U+</option>
+            <option value="SKT 알뜰폰">SKT 알뜰폰</option>
+            <option value="KT 알뜰폰">KT 알뜰폰</option>
+            <option value="LG U+ 알뜰폰">LG U+ 알뜰폰</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <input type="tel" placeholder="휴대전화번호" id="tel" name="tel" />
+      </div>
+      <div>
+        <label
+          ><input type="checkbox" id="agree" name="agree" />인증 약관
+          전체동의</label
+        >
+      </div>
+      <!-- 인증요청 버튼 영역 -->
+      <div>
+        <input type="submit" value="인증요청" />
+      </div>
+    </form>
+  </body>
+</html>

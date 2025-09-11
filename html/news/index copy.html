@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼</title>
+    <!-- 분리된 CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 헤더(로고) 영역 -->
+    <header class="brand">
+      <a
+        href="https://www.naver.com"
+        class="brand__link"
+        aria-label="네이버로 이동"
+      >
+        <img src="./img/naver-logo.png" alt="네이버" class="brand__logo" />
+      </a>
+      <p class="brand__subtitle">실명 인증된 아이디로 가입</p>
+    </header>
+
+    <!-- 폼 영역 -->
+    <main>
+      <form action="#" method="post" class="form" novalidate>
+        <!-- 아이디 -->
+        <div class="form__group">
+          <label for="id" class="form__label">아이디</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            class="form__input"
+            placeholder="아이디"
+            required
+          />
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="form__group">
+          <label for="pwd" class="form__label">비밀번호</label>
+          <input
+            type="password"
+            id="pwd"
+            name="pwd"
+            class="form__input"
+            placeholder="비밀번호"
+            required
+          />
+        </div>
+
+        <!-- 이메일 -->
+        <div class="form__group">
+          <label for="email" class="form__label">이메일(선택)</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form__input"
+            placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)"
+          />
+        </div>
+
+        <!-- 이름 -->
+        <div class="form__group">
+          <label for="name" class="form__label">이름</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form__input"
+            placeholder="이름"
+            required
+          />
+        </div>
+
+        <!-- 생년월일 -->
+        <div class="form__group">
+          <label for="birth" class="form__label">생년월일(8자리)</label>
+          <input
+            type="text"
+            id="birth"
+            name="birth"
+            class="form__input"
+            placeholder="YYYYMMDD"
+            inputmode="numeric"
+            pattern="\d{8}"
+            maxlength="8"
+            required
+          />
+          <small class="form__hint">예: 19991231</small>
+        </div>
+
+        <!-- 통신사 -->
+        <div class="form__group">
+          <label for="telecom" class="form__label">통신사</label>
+          <select id="telecom" name="telecom" class="form__select" required>
+            <option value="">통신사 선택</option>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LG U+">LG U+</option>
+            <option value="SKT 알뜰폰">SKT 알뜰폰</option>
+            <option value="KT 알뜰폰">KT 알뜰폰</option>
+            <option value="LG U+ 알뜰폰">LG U+ 알뜰폰</option>
+          </select>
+        </div>
+
+        <!-- 휴대전화 -->
+        <div class="form__group">
+          <label for="tel" class="form__label">휴대전화번호</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            class="form__input"
+            placeholder="01012345678"
+            inputmode="numeric"
+            pattern="^01[016789]\d{7,8}$"
+            required
+          />
+          <small class="form__hint">숫자만 입력 (예: 01012345678)</small>
+        </div>
+
+        <!-- 약관 동의 -->
+        <div class="form__group form__group--checkbox">
+          <label class="checkbox">
+            <input type="checkbox" id="agree" name="agree" required />
+            <span>인증 약관 전체동의</span>
+          </label>
+        </div>
+
+        <!-- 버튼 -->
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">인증요청</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
